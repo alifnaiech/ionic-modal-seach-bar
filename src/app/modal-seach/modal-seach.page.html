@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Province</ion-title>
+  </ion-toolbar>
+    <ion-item>
+       <ion-input placeholder="cerca" [(ngModel)]="filteredString"></ion-input>
+    </ion-item>
+
+    
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let p of listProvince | filter:filteredString">
+      <ion-label>{{ p.Capoluogo }}</ion-label>
+      <ion-checkbox slot="end" [value]="p.IDProvincia" (ionChange)="selectedProvince($event)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+    
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+      <ion-button expand="block" (click)="onSelectProvince()">Select</ion-button>
+      <ion-button expand="block">Cancel</ion-button>
+    </ion-toolbar>
+</ion-footer>
