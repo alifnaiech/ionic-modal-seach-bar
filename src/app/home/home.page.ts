@@ -20,7 +20,7 @@ export class HomePage implements OnInit{
   constructor(private modalCtrl: ModalController, private _mySrvHome: HomeService) {}
 
   ngOnInit(){
-  this.loadProvince()
+   this.loadProvince()
    this.loadUser();
   }
 
