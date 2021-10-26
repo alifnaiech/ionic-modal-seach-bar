@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  APIURL: 'http://superforni.forj.it/API/provincie/',
+  APIURL: 'http://superforni.forj.it/API/',
   production: false
 };
 

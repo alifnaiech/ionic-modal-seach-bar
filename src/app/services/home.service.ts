@@ -11,7 +11,12 @@ export class HomeService {
   
   public getProvince(): Observable<any>{
     const headers = new HttpHeaders({'Accept': 'application/json','Content-Type': 'application/json'})
-    return this.httpClient.get(environment.APIURL, {headers: headers});
+    return this.httpClient.get(environment.APIURL+'provincie/', {headers: headers});
+  }
+
+  public getUsers(): Observable<any>{
+    const headers = new HttpHeaders({'Accept': 'application/json', 'Content-Type': 'application/json'});
+    return this.httpClient.get(environment.APIURL+'utenti/', {headers: headers})
   }
 
 }

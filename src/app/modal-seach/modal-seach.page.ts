@@ -8,8 +8,8 @@ import { HomeService } from '../services/home.service';
   styleUrls: ['./modal-seach.page.scss'],
 })
 export class ModalSeachPage implements OnInit{
-  public filteredString: string='';
   @Input() IDProvincia: any;
+  public filteredString: string='';
   public listProvince: any [] = [];
   public provinciaChecked: boolean = false;
   constructor(private modalCtrl: ModalController, public _mySrvHome: HomeService) { 
@@ -34,6 +34,9 @@ export class ModalSeachPage implements OnInit{
     this.modalCtrl.dismiss(this.IDProvincia)
   }
 
+  public modalDismiss(){
+    this.modalCtrl.dismiss();
+  }
 
 
 }
